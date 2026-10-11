@@ -11,6 +11,8 @@ import {
   Database,
   Code2,
   ExternalLink,
+  Phone,
+  MessageCircle,
 } from "lucide-react";
 import "./App.css";
 
@@ -18,6 +20,8 @@ const profile = {
   name: "Shailendra Kumar",
   headline: "Senior Backend & AI Engineer",
   email: "shailendrakumarnirmal7524@gmail.com",
+  phone: "+91 8840265502",
+  whatsapp: "+91 7524091205",
   github: "https://github.com/shailendraKumar1",
   linkedin: "https://www.linkedin.com/in/shailendrakumar7524/",
 };
@@ -496,6 +500,12 @@ function App() {
             Get in touch <ArrowUpRight size={17} />
           </a>
           <div className="contact-links">
+            <a href="tel:+918840265502">
+              <Phone size={16} /> {profile.phone}
+            </a>
+            <a href="https://wa.me/917524091205" target="_blank" rel="noreferrer">
+              <MessageCircle size={16} /> WhatsApp {profile.whatsapp}
+            </a>
             <a href={profile.github} target="_blank" rel="noreferrer">
               <Code2 size={16} /> GitHub
             </a>
