@@ -190,7 +190,11 @@ const achievements = [
   { award: "The Spotlight Award", organization: "Ola Electric" },
   { award: "The Warthog of Backend Award", organization: "Threedots" },
   { award: "Employee of the Month", organization: "Pixis" },
-  { award: "Best Cloud Project · AdTech", organization: "India DevOps Show 2025" },
+  {
+    award: "Best Cloud Project · AdTech",
+    organization: "India DevOps Show 2025",
+    link: "https://www.linkedin.com/posts/adtech-pixisai-devopsexcellence-share-7297989760147472384-V9t0/",
+  },
 ];
 
 const skills = [
@@ -458,6 +462,11 @@ function App() {
                 <div>
                   <h3>{item.award}</h3>
                   <p>{item.organization}</p>
+                  {item.link && (
+                    <a className="achievement-source" href={item.link} target="_blank" rel="noreferrer">
+                      View LinkedIn post <ArrowUpRight size={14} />
+                    </a>
+                  )}
                 </div>
                 <ArrowUpRight size={18} aria-hidden="true" />
               </article>
