@@ -29,66 +29,105 @@ const profile = {
 const projects = [
   {
     number: "01",
-    type: "AGENTIC AI · MCP · RAG",
-    title: "Multi-Agent AI Orchestration",
+    type: "AGENTIC AI · ORCHESTRATION · OBSERVABILITY",
+    title: "Multi-Agent AI Orchestration Platform",
     description:
-      "Designed production AI workflows with supervisor-driven tool selection, parallel execution, guardrails, MCP integrations, and grounded responses across multiple business verticals.",
+      "Built a supervisor-driven agent platform combining ReAct loops, parallel tool execution, MCP integrations, guardrails, and grounded responses across 9+ AI verticals. Instrumented tool and MCP latency, error rates, and execution traces for production observability.",
     stack: [
       "Python",
       "MCP / FastMCP",
-      "RAG",
-      "Gemini / GPT",
+      "ReAct",
       "Redis Streams",
+      "New Relic",
       "GCP",
     ],
-    impact: "9+ business verticals supported",
+    impact: "9+ AI verticals · Tool and MCP observability",
     icon: Workflow,
     link: "",
     note: "Production case study · implementation details generalized",
   },
   {
     number: "02",
-    type: "DISTRIBUTED SYSTEMS · STREAM PROCESSING",
-    title: "Fault-Tolerant AI Job Orchestration",
+    type: "DISTRIBUTED SYSTEMS · PERFORMANCE · COST",
+    title: "Decoupled AI Job Orchestration",
     description:
-      "Built asynchronous orchestration patterns using Redis Streams and consumer groups, focusing on reliable message processing, retries, recovery, and low-latency job ingestion.",
+      "Re-architected a tightly coupled orchestration service into an API gateway, Redis Streams, and worker-services design. Separated request ingress from background execution to improve concurrency, isolate workloads, and use compute resources more efficiently.",
     stack: [
-      "Go / Python",
+      "API Gateway",
       "Redis Streams",
       "Consumer Groups",
+      "Workers",
       "Retries",
       "Observability",
     ],
-    impact: "Under 50 ms ingress latency target",
+    impact: "40% higher throughput · 10× lower latency · 60% lower infrastructure cost",
     icon: Workflow,
     link: "",
     note: "Production case study · implementation details generalized",
   },
   {
     number: "03",
-    type: "DATA PLATFORM · BIG DATA",
-    title: "Large-Scale Data Ingestion Platform",
+    type: "MULTIMODAL AI · RAG · RETRIEVAL",
+    title: "Multimodal RAG for Unstructured Content",
     description:
-      "Developed data-platform services integrating ingestion pipelines, event streaming, data-lake storage, and analytical querying for advertising data workloads.",
+      "Built an ingestion and retrieval pipeline for unstructured files, converting content into embeddings for semantic search. Focused on improving contextual relevance and giving models better evidence for grounded answers.",
     stack: [
-      "Go",
       "Python",
-      "Kafka",
-      "S3",
-      "Apache Doris",
-      "Flink",
+      "Multimodal RAG",
+      "Embeddings",
+      "Vector Search",
+      "Retrieval",
+      "Evaluation",
     ],
-    impact: "1TB+ daily data · 5,000+ pipelines",
+    impact: "Unstructured files → searchable embeddings → grounded answers",
     icon: Database,
     link: "",
     note: "Production case study · implementation details generalized",
   },
   {
     number: "04",
+    type: "TEMPORAL · PERSONALIZATION · GENERATIVE AI",
+    title: "Personalized News and Greeting Workflows",
+    description:
+      "Designed durable Temporal workflows for personalized daily news digests across 50+ categories and preference-based greeting cards. Integrated Gemini image generation and text-to-speech with replay-safe execution.",
+    stack: [
+      "Temporal",
+      "Python",
+      "Gemini",
+      "Image Generation",
+      "Text-to-Speech",
+      "Durable Workflows",
+    ],
+    impact: "50+ news categories · Personalized content generation",
+    icon: Workflow,
+    link: "",
+    note: "Production case study · implementation details generalized",
+  },
+  {
+    number: "05",
+    type: "MCP · FINANCE · TRUST & SAFETY",
+    title: "Grounded Finance and Trust & Safety Skills",
+    description:
+      "Built Finance and Trust & Safety MCP skills with Gemini and Google Search grounding. Supported personalized financial Q&A, source-grounded answers, and text/image scam detection and fact-checking.",
+    stack: [
+      "Python",
+      "FastMCP",
+      "Vertex AI Gemini",
+      "Google Search Grounding",
+      "RAG",
+      "Multimodal Analysis",
+    ],
+    impact: "Financial Q&A · Personalized insights · Text and image fact-checking",
+    icon: Code2,
+    link: "",
+    note: "Production case study · implementation details generalized",
+  },
+  {
+    number: "06",
     type: "BACKEND · GRAPHQL · PERFORMANCE",
     title: "High-Performance Sports Content API",
     description:
-      "Improved a Go and GraphQL backend through parallel resolvers and caching. Supported dynamic sports landing-page data and built distributed ingestion for content updates.",
+      "Improved a Go and GraphQL backend powering sports landing-page content for 500K+ daily active users. Used parallel resolvers and caching to reduce tail latency, increase throughput, and support distributed content ingestion.",
     stack: [
       "Golang",
       "GraphQL",
@@ -103,31 +142,32 @@ const projects = [
     note: "Production case study · implementation details generalized",
   },
   {
-    number: "05",
-    type: "EVENT-DRIVEN SYSTEMS · RELIABILITY",
-    title: "High-Throughput Event Processing",
+    number: "07",
+    type: "DATA PLATFORM · BIG DATA",
+    title: "Large-Scale AdTech Data Platform",
     description:
-      "Built Go event-processing services and resilient Kafka workflows with retries, exponential backoff, and dead-letter queues to improve reliability at scale.",
+      "Built data-platform services connecting ingestion pipelines, event streaming, lake storage, and analytical querying for advertising workloads. Worked across ingestion and processing layers to support large daily data volumes.",
     stack: [
-      "Golang",
       "Kafka",
-      "Retries",
-      "Dead-Letter Queues",
-      "Monitoring",
+      "S3",
+      "Apache Doris",
+      "Flink",
+      "Data Pipelines",
+      "Java / Python",
     ],
-    impact: "100K RPM · 99% reduction in data loss",
-    icon: Code2,
+    impact: "1TB+ data/day · 5,000+ pipelines",
+    icon: Database,
     link: "",
     note: "Production case study · implementation details generalized",
   },
   {
-    number: "06",
-    type: "CONNECTED VEHICLES · TWO-WHEELER PLATFORM",
-    title: "Ola Electric Vehicle Platform",
+    number: "08",
+    type: "CONNECTED VEHICLES · BACKEND SYSTEMS",
+    title: "Ola Electric Connected Vehicle Services",
     description:
-      "Built backend services connecting Ola Electric two-wheelers to cloud systems, including vehicle messaging, device authentication, and fleet access controls.",
-    stack: ["Java", "Spring Boot", "MQTT", "JWT", "Vehicle Cloud"],
-    impact: "10M+ vehicle messages handled daily",
+      "Contributed to cloud backend services for connected two-wheelers, including vehicle messaging, device authentication, and fleet access controls. Built services supporting reliable communication between vehicles and cloud systems.",
+    stack: ["Java", "Spring Boot", "MQTT", "JWT", "Authentication", "Vehicle Cloud"],
+    impact: "10M+ vehicle messages/day",
     icon: Database,
     link: "",
     note: "Production case study · implementation details generalized",
@@ -140,9 +180,10 @@ const experience = [
     company: "Reliance Intelligence (Jio)",
     role: "AI/ML Engineer (Consultant)",
     points: [
-      "Built production agentic AI experiences using MCP, LLM tool-calling, RAG, and workflow state.",
-      "Designed orchestration and resumable workflow patterns with Redis Streams, Bigtable, and Pub/Sub.",
-      "Worked on trust-and-safety fact-checking and grounded financial-answering tools.",
+      "Re-architected orchestration from a tightly coupled service to an API gateway, Redis Streams, and worker services, delivering 40% higher throughput, 10× lower latency, and 60% lower infrastructure cost.",
+      "Built multi-agent workflows across 9+ AI verticals and instrumented tool/MCP latency, error rates, and execution traces using New Relic and GCP.",
+      "Developed multimodal RAG for unstructured files and Temporal workflows for personalized news digests across 50+ categories, image generation, and text-to-speech.",
+      "Launched Finance and Trust & Safety MCP skills for personalized financial Q&A, and text/image scam detection and fact-checking using grounded sources.",
     ],
   },
   {
@@ -260,12 +301,14 @@ function App() {
               BACKEND ENGINEERING · AGENTIC AI
             </div>
             <h1>
-              Building reliable systems for an <span>intelligent</span> world.
+              Building systems that scale — from{" "}
+              <span>distributed backends</span> to production AI.
             </h1>
             <p className="hero-lede">
-              I'm <strong>Shailendra Kumar</strong> — an engineer working
-              across distributed systems, data infrastructure, and production
-              AI agents.
+              I'm <strong>Shailendra Kumar</strong>, a backend and AI engineer
+              building high-throughput services, data platforms, and agentic AI
+              systems. My work spans 500K+ user-facing workloads, 1TB+ daily
+              data platforms, and production AI orchestration.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
@@ -338,12 +381,12 @@ function App() {
             <p>Data processed per day</p>
           </div>
           <div>
-            <strong>45<span>%</span></strong>
-            <p>Lower p95 latency</p>
+            <strong>10<span>×</span></strong>
+            <p>Orchestration latency reduction</p>
           </div>
           <div>
-            <strong>3<span>×</span></strong>
-            <p>Throughput improvement</p>
+            <strong>60<span>%</span></strong>
+            <p>Lower orchestration infrastructure cost</p>
           </div>
         </section>
 
@@ -364,14 +407,17 @@ function App() {
             </p>
             <div className="about-detail">
               <p>
-                My work spans high-throughput APIs, event-driven data
-                platforms, workflow orchestration, and agentic AI systems
-                using tools, retrieval, and grounded generation.
+                I build backend and AI systems where reliability, latency,
+                throughput, and operating cost matter. My experience spans
+                distributed APIs, event-driven architectures, large-scale data
+                pipelines, agent orchestration, MCP integrations, and
+                retrieval-augmented generation.
               </p>
               <p>
                 I graduated from IIIT Allahabad with a B.Tech in Electronics
-                and Communication Engineering. I value clear system
-                boundaries, pragmatic architecture, and measurable outcomes.
+                and Communication Engineering. I focus on clear service
+                boundaries, measurable engineering outcomes, and taking systems
+                from architecture through production operations.
               </p>
             </div>
           </div>
@@ -405,7 +451,7 @@ function App() {
           <SectionHeading
             eyebrow="03 — SELECTED WORK"
             title="Systems, not just side projects."
-            description="Selected work across AI orchestration, connected vehicles, distributed systems, data platforms, and high-performance APIs."
+            description="Selected work across agentic AI, multimodal retrieval, durable workflows, connected vehicles, data platforms, and high-performance APIs."
           />
           <div className="project-grid">
             {projects.map((project) => {
